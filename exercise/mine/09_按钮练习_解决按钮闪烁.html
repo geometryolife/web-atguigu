@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪碧图-解决按钮第一次闪烁的问题</title>
+    <style>
+        a:link {
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url('../img/09/btn.png');
+        }
+
+        a:hover {
+            /* 让第二个按钮图移动显示区 */
+            /* 水平  垂直 */
+            /* 正：右移  负：左移 */
+            background-position: -93px 0;
+        }
+
+        a:active {
+            /* 移动两个图的位置 */
+            background-position: -186px 0;
+        }
+
+        .box1 {
+            width: 128px;
+            height: 46px;
+            background-image: url('../img/09/amazon-sprite_.png');
+            background-position: 0 0;
+        }
+        .box2{
+            width: 42px;
+            height: 30px;
+            background-image: url('../img/09/amazon-sprite_.png');
+            background-position: -58px -338px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <a href="javascript:;"></a>
+</body>
+
+</html>
