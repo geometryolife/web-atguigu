@@ -32,24 +32,24 @@
     *       在接口中所有的方法都是抽象方法
     *
     * */
-    interface myInter{
+    interface myInter {
         name: string;
 
-        sayHello():void;
+        sayHello(): void;
     }
 
     /*
     * 定义类时，可以使类去实现一个接口,
     *   实现接口就是使类满足接口的要求
     * */
-    class MyClass implements myInter{
+    class MyClass implements myInter {
         name: string;
 
         constructor(name: string) {
             this.name = name;
         }
 
-        sayHello(){
+        sayHello() {
             console.log('大家好~~');
         }
 

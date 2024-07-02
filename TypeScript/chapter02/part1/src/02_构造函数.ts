@@ -1,4 +1,4 @@
-class Dog{
+class Dog {
     name: string;
     age: number;
 
@@ -12,7 +12,7 @@ class Dog{
         this.age = age;
     }
 
-    bark(){
+    bark() {
         // alert('汪汪汪！');
         // 在方法中可以通过this来表示当前调用方法的对象
         console.log(this.name);

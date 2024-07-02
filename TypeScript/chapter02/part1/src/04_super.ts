@@ -11,7 +11,7 @@
         }
     }
 
-    class Dog extends Animal{
+    class Dog extends Animal {
 
         age: number;
 

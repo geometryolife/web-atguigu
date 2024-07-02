@@ -1,7 +1,7 @@
-(function (){
+(function () {
 
     // 定义一个Animal类
-    class Animal{
+    class Animal {
         name: string;
         age: number;
 
@@ -10,7 +10,7 @@
             this.age = age;
         }
 
-        sayHello(){
+        sayHello() {
             console.log('动物在叫~');
         }
     }
@@ -28,9 +28,9 @@
     * */
     // 定义一个表示狗的类
     // 使Dog类继承Animal类
-    class Dog extends Animal{
+    class Dog extends Animal {
 
-        run(){
+        run() {
             console.log(`${this.name}在跑~~~`);
         }
 
@@ -42,7 +42,7 @@
 
     // 定义一个表示猫的类
     // 使Cat类继承Animal类
-    class Cat extends Animal{
+    class Cat extends Animal {
         sayHello() {
             console.log('喵喵喵喵！');
         }

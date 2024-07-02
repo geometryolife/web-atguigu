@@ -4,7 +4,7 @@
 *       属性
 *       方法
 * */
-class Person{
+class Person {
 
     /*
     *   直接定义的属性是实例属性，需要通过对象的实例去访问：
@@ -30,7 +30,7 @@ class Person{
     /*
     * 如果方法以static开头则方法就是类方法，可以直接通过类去调用
     * */
-    sayHello(){
+    sayHello() {
         console.log('Hello 大家好！');
     }
 
@@ -51,5 +51,3 @@ const per = new Person();
 
 // Person.sayHello();
 per.sayHello();
-
-

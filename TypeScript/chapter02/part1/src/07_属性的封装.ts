@@ -1,6 +1,6 @@
-(function (){
+(function () {
     // 定义一个表示人的类
-    class Person{
+    class Person {
         // TS可以在属性前添加属性的修饰符
         /*
         *   public 修饰的属性可以在任意位置访问（修改） 默认值
@@ -45,21 +45,21 @@
         // }
 
         // TS中设置getter方法的方式
-        get name(){
+        get name() {
             // console.log('get name()执行了！！');
             return this._name;
         }
 
-        set name(value){
+        set name(value) {
             this._name = value;
         }
 
-        get age(){
+        get age() {
             return this._age;
         }
 
-        set age(value){
-            if(value >= 0){
+        set age(value) {
+            if (value >= 0) {
                 this._age = value
             }
         }
@@ -81,7 +81,7 @@
     // console.log(per);
 
 
-    class A{
+    class A {
         protected num: number;
 
         constructor(num: number) {
@@ -89,9 +89,9 @@
         }
     }
 
-    class B extends A{
+    class B extends A {
 
-        test(){
+        test() {
             console.log(this.num);
         }
 
@@ -101,20 +101,20 @@
     // b.num = 33;
 
 
-   /* class C{
+    /* class C{
+ 
+         name: string;
+         age: number
+ 
+         // 可以直接将属性定义在构造函数中
+         constructor(name: string, age: number) {
+             this.name = name;
+              this.age = age;
+         }
+ 
+     }*/
 
-        name: string;
-        age: number
-
-        // 可以直接将属性定义在构造函数中
-        constructor(name: string, age: number) {
-            this.name = name;
-             this.age = age;
-        }
-
-    }*/
-
-    class C{
+    class C {
 
         // 可以直接将属性定义在构造函数中
         constructor(public name: string, public age: number) {

@@ -17,10 +17,10 @@
         // 定义一个抽象方法
         // 抽象方法使用 abstract开头，没有方法体
         // 抽象方法只能定义在抽象类中，子类必须对抽象方法进行重写
-        abstract sayHello():void;
+        abstract sayHello(): void;
     }
 
-    class Dog extends Animal{
+    class Dog extends Animal {
 
         sayHello() {
             console.log('汪汪汪汪！');
@@ -28,7 +28,7 @@
 
     }
 
-    class Cat extends Animal{
+    class Cat extends Animal {
         sayHello() {
             console.log('喵喵喵喵！');
         }
