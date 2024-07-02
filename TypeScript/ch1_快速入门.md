@@ -469,35 +469,35 @@
 
 ## 4. webpack
 
-- 通常情况下，实际开发中我们都需要使用构建工具对代码进行打包，TS同样也可以结合构建工具一起使用，下边以webpack为例介绍一下如何结合构建工具使用TS。
+- 通常情况下，实际开发中我们都需要使用构建工具对代码进行打包，TS 同样也可以结合构建工具一起使用，下边以 webpack 为例介绍一下如何结合构建工具使用 TS。
 
 - 步骤：
 
   1. 初始化项目
 
-     - 进入项目根目录，执行命令 ``` npm init -y```
-       - 主要作用：创建package.json文件
+     - 进入项目根目录，执行命令 ```npm init -y```
+       - 主要作用：创建 `package.json` 文件
 
   2. 下载构建工具
 
      - ```npm i -D webpack webpack-cli webpack-dev-server typescript ts-loader clean-webpack-plugin```
        - 共安装了7个包
          - webpack
-           - 构建工具webpack
+           - 构建工具 webpack
          - webpack-cli
-           - webpack的命令行工具
+           - webpack 的命令行工具
          - webpack-dev-server
-           - webpack的开发服务器
+           - webpack 的开发服务器
          - typescript
-           - ts编译器
+           - ts 编译器
          - ts-loader
            - ts加载器，用于在webpack中编译ts文件
          - html-webpack-plugin
-           - webpack中html插件，用来自动创建html文件
+           - webpack 中 html 插件，用来自动创建 html 文件
          - clean-webpack-plugin
-           - webpack中的清除插件，每次构建都会先清除目录
+           - webpack 中的清除插件，每次构建都会先清除目录
 
-  3. 根目录下创建webpack的配置文件webpack.config.js
+  3. 根目录下创建 webpack 的配置文件 `webpack.config.js`
 
      - ```javascript
        const path = require("path");
@@ -521,7 +521,7 @@
                path: path.resolve(__dirname, "dist"),
                filename: "bundle.js",
                environment: {
-                   arrowFunction: false // 关闭webpack的箭头函数，可选
+                   arrowFunction: false // 关闭 webpack 的箭头函数，可选
                }
            },
        
@@ -547,11 +547,10 @@
                    title:'TS测试'
                }),
            ]
-       
        }
        ```
 
-  4. 根目录下创建tsconfig.json，配置可以根据自己需要
+  4. 根目录下创建 `tsconfig.json`，配置可以根据自己需要
 
      - ```json
        {
@@ -563,7 +562,7 @@
        }
        ```
 
-  5. 修改package.json添加如下配置
+  5. 修改 package.json 添加如下配置
 
      - ```json
        {
@@ -577,27 +576,25 @@
        }
        ```
 
-  6. 在src下创建ts文件，并在并命令行执行```npm run build```对代码进行编译，或者执行```npm start```来启动开发服务器
+  6. 在 src 下创建 ts 文件，并在并命令行执行 `npm run build` 对代码进行编译，或者执行 `npm start` 来启动开发服务器
 
-     
+## 5. Babel
 
-## 5、Babel
-
-- 经过一系列的配置，使得TS和webpack已经结合到了一起，除了webpack，开发中还经常需要结合babel来对代码进行转换以使其可以兼容到更多的浏览器，在上述步骤的基础上，通过以下步骤再将babel引入到项目中。
+- 经过一系列的配置，使得 TS 和 webpack 已经结合到了一起，除了 webpack，开发中还经常需要结合 babel 来对代码进行转换以使其可以兼容到更多的浏览器，在上述步骤的基础上，通过以下步骤再将 babel 引入到项目中。
 
   1. 安装依赖包：
      - ```npm i -D @babel/core @babel/preset-env babel-loader core-js```
      - 共安装了4个包，分别是：
        - @babel/core
-         - babel的核心工具
+         - babel 的核心工具
        - @babel/preset-env
-         - babel的预定义环境
+         - babel 的预定义环境
        - @babel-loader
-         - babel在webpack中的加载器
+         - babel 在 webpack 中的加载器
        - core-js
-         - core-js用来使老版本的浏览器支持新版ES语法
+         - core-js 用来使老版本的浏览器支持新版 ES 语法
 
-  2. 修改webpack.config.js配置文件
+  2. 修改 `webpack.config.js` 配置文件
 
      - ```javascript
        ...略...
@@ -636,4 +633,4 @@
        ...略...
        ```
 
-     - 如此一来，使用ts编译后的文件将会再次被babel处理，使得代码可以在大部分浏览器中直接使用，可以在配置选项的targets中指定要兼容的浏览器版本。
+     - 如此一来，使用 ts 编译后的文件将会再次被 babel 处理，使得代码可以在大部分浏览器中直接使用，可以在配置选项的 targets 中指定要兼容的浏览器版本。
