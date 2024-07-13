@@ -9,6 +9,7 @@ function calcTaxES5() {
   });
 }
 
+// 在 TS 中参数不匹配是不允许的，因此会报错，JS 则不会
 calcTaxES5(50000, "Smith", "Johnson", "McDonald");
 calcTaxES5(750000, "Olson", "Clinton");
 

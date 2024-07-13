@@ -1,3 +1,6 @@
 {
-  "extends": "../../ch01/tsconfig.json"
+  "extends": "../../ch01/tsconfig.json",
+  "compilerOptions": {
+    "noEmitOnError": false
+  }
 }
