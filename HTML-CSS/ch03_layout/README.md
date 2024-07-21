@@ -186,10 +186,51 @@
 
 ## p54 - 布置练习
 
+## p55 - 京东图片列表
+
+- `../exercise/01_图片的列表.html`
+
+## p56 - 京东左侧导航栏
+
+- `../exercise/02_京东左侧导航条.html`
+
+## p57 - 网易新闻列表
+
+- `../exercise/03_网易新闻的右侧的列表.html`
+
+## p58 - 盒子的大小
+
 - `11.盒子的尺寸.html`
+- 默认情况下，盒子的可见框大小由内容区、内边距、边框共同决定
+- `box-sizing` 用来设置盒子尺寸的计算方式（设置 width 和 height 的作用）
+  - 可选值：
+    - `content-box` 默认值，宽度和高度用来设置内容区的大小
+    - `border-box` 宽度和高度用来设置整个盒子可见框的大小，width 和 height 指的是内容区、内边距、边框的总大小
+
+## p59 - 轮廓阴影和圆角
+
 - `12.轮廓和圆角.html`
-
-## p<++> - <++>
-
-- `<++>.<++>.html`
-
+- `outline` 用来设置元素的轮廓线，用法和 `border` 一样，轮廓和边框不同的点，就是轮廓不会影响可见框的大小
+- `box-shadow` 用来设置元素的阴影效果，阴影不会影响页面布局
+  - `box-shadow: 10px 10px orange;`
+  - 第一个值，水平偏移量，设置阴影的水平位置，正值向右移动，负值向左移动
+  - 第二个值，垂直偏移量，设置阴影的垂直位置，正值向下移动，负值向上移动
+  - 第三个值，阴影的模糊半径
+  - 第四个值，阴影的颜色
+  - `box-shadow: 20px 20px rgba(0, 0, 0, .3);` => 调节颜色深浅
+  - `box-shadow: 20px 20px 10px rgba(0, 0, 0, .3);` => 第三个值，调节羽化像素
+- `border-radius` 用来设置圆角，即设置元的半径大小
+  - `border-top-left-radius` 左上角
+    - `border-top-left-radius: 50px` => 正圆
+    - `border-top-left-radius: 50px 100px` => 椭圆 => 前一个是 x 轴，后一个是 y 轴
+  - `border-top-right-radius` 右上角
+  - `border-bottom-left-radius` 左下角
+  - `border-bottom-right-radius` 右下角
+- `border-radius` 可以分别指定四个角的圆角
+  - 四个值：左上 右上 右下 左下
+  - 三个值：左上 右上/左下 右下
+  - 两个值：左上/右下 右上/左下
+  - 一个值：四个角一样
+  - `border-radius: 10px 20px 30px 40px`
+  - `border-radius: 20px / 40px;` => 横向 20，纵向 40
+- 将元素设置为圆形 => `border-radius: 50%`
